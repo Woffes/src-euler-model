@@ -5,15 +5,15 @@ let r = 1000; //Startpunkt fra det sorte hul
 let end = 1; //Slutpunkt
 
 function setup() {
-  createCanvas(700, 700)
+  createCanvas(windowWidth, windowHeight)
 }
 
 function draw() {
   background(220);
-  eulerMethode(frameCount)
+  eulerMethode()
 }
 
-  function eulerMethode(frame) {
+  function eulerMethode() {
     for (let t = 0; t <= end; t += h) {
       const derivative = -c * (1 - rs / r) * Math.sqrt(rs / r);
       r += derivative * h;
