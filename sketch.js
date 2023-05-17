@@ -1,15 +1,15 @@
 
-const rs = 25; //Sorte hul's radius
+const rs = 25; //Sorte huls radius
 const c = 299792; //Lysets hastighed
 const h = 0.001; //Skridtlængde
 let r = 1000; // Startværdi
-const end = 1; //Slutpunkt
+const end = 5; //Slutpunkt
 
 let coordinates = []; //Array til koordinatsæt
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(1)
+  frameRate(5)
 }
 
 function draw() {
@@ -19,11 +19,22 @@ function draw() {
 }
 
 function drawPoints(){
+  //tegner punkterne
   for (let i = 0; i < coordinates.length; i++) {
     strokeWeight(10)
     let coordinate = coordinates[i];
     point(coordinate.x, coordinate.y);
   }
+
+  //Forbinder punkter med en linje
+  strokeWeight(1);
+  noFill();
+  beginShape();
+  for (let i = 0; i < coordinates.length; i++) {
+    let coordinate = coordinates[i];
+    vertex(coordinate.x, coordinate.y);
+  }
+  endShape();
 }
 
 function eulerMethod() {
