@@ -1,24 +1,27 @@
-let dy
-let c = 299792
-let rs = 25
-let r = 1000 //y værdi
-let t = 0 //x værdi
-let yn
+let rs = 25; //Sorte huls radius
+let c = 299792; //Lysets hastighed
+let h = 0.001; // Skridtlængden
+let r = 1000; // Startpunkt fra det sorte hul
+let end = 1; // Slutpunkt
+
 
 function setup() {
-  dy=-c*(1-rs/r)*sqrt(rs/r)
   createCanvas(700, 700)
-  return dy
 }
 
 function draw() {
   background(220);
-  antalPunkter()
+  eulerMethode()
 }
 
-function antalPunkter(){
-  let punkter=[]
-  let i
-  for(let i = 0; 0 < i, i++;)
-  punkter[i]=[]
-}
+  function eulerMethode() {
+    for (let t = 0; t <= end; t += h) {
+      const derivative = -c * (1 - rs / r) * Math.sqrt(rs / r);
+      r += derivative * h;
+  
+      if (isNaN(r)) {
+        break; // Stop, hvis r er NaN
+      }
+      console.log(`t: ${t.toFixed(3)}, r: ${r.toFixed(3)}`);
+    }
+  }
