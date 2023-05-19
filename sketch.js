@@ -9,7 +9,7 @@ let coordinates = []; //Array til koordinatsæt
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(10)
+  frameRate(5)
 }
 
 function draw() {
