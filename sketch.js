@@ -24,13 +24,13 @@ function draw() {
 function drawPoint(pointIndex){
   //tegner punkterne
   for (let i = 0; i < pointIndexCounter; i++) {
-    strokeWeight(10)
+    strokeWeight(8)
     let coordinate = coordinates[i];
     point(coordinate.x, coordinate.y);
   }
 
   //Forbinder punkter med en linje
-  strokeWeight(1);
+  strokeWeight(0.5);
   noFill();
   beginShape();
   for (let i = 0; i < pointIndexCounter; i++) {
