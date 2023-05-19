@@ -1,4 +1,3 @@
-
 const rs = 25; //Sorte huls radius
 const c = 299792; //Lysets hastighed
 const h = 0.001; //Skridtlængde
