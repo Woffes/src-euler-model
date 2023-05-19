@@ -4,7 +4,7 @@ const h = 0.001; //Skridtlængde
 let r = 1000; //Startværdi
 const end = 5; //Slutpunkt
 
-let pointIndexCounter = 0;
+let pointIndexCounter = 0; //Startværdi til punkter
 let coordinates = []; //Array til koordinatsæt
 
 function setup() {
