@@ -3,7 +3,6 @@ const c = 299792; //Lysets hastighed
 const h = 0.001; //Skridtlængde
 let r = 1000; //Startværdi
 const end = 5; //Slutpunkt
-
 let pointIndexCounter = 0; //Startværdi til punkter
 let coordinates = []; //Array til koordinatsæt
 
@@ -49,6 +48,6 @@ function eulerMethod() {
       break; // Stop, hvis r er NaN
     }
 
-    coordinates.push({ x: t*60000, y: r }); // Gem koordinatsæt i array
+    coordinates.push({ x: t*60000, y: r }); //Skubber koordinatsæt i hen sådan at grafen ikke er langs den højre kant på skærmen
   }
 }
