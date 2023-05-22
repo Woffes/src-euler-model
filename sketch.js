@@ -48,6 +48,6 @@ function eulerMethod() {
       break; // Stop, hvis r er NaN
     }
 
-    coordinates.push({ x: t*60000, y: r }); //Skubber koordinatsæt i hen sådan at grafen ikke er langs den højre kant på skærmen
+    coordinates.push({ x: t*60000, y: r }); //Skubber koordinatsæt sådan at grafen ikke er langs den højre kant på skærmen
   }
 }
