@@ -43,7 +43,6 @@ function drawPoint1(pointIndex){
   //Forbinder punkter med en linje
   strokeWeight(0.5);
   noFill();
-  //stroke(255, 125, 125);
   beginShape();
   for (let i = 0; i < pointIndexCounter1; i++) {
     let coordinate1 = coordinates1[i];
